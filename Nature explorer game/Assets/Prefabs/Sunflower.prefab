@@ -48,7 +48,7 @@ MonoBehaviour:
   radius: 1.7
   interactionType: 0
   isInteractable: 1
-  item: {fileID: 11400000, guid: 140452c254ef470469065bc283c1df5f, type: 2}
+  item: {fileID: 11400000, guid: e96db3bb9385eae43b40ea1338ad531f, type: 2}
 --- !u!135 &375909027060292510
 SphereCollider:
   m_ObjectHideFlags: 0
