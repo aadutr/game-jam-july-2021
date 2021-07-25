@@ -12,6 +12,8 @@ public abstract class Interactable : MonoBehaviour
     float holdTime;
 
     public InteractionType interactionType;
+    public bool isInteractable = true;
+    
 
     public abstract string GetDescription();
     public abstract void Interact();
@@ -20,6 +22,21 @@ public abstract class Interactable : MonoBehaviour
     public void ResetHoldTime() => holdTime = 0f;
 
     public float GetHoldTime() => holdTime;
+    
+    public void Disable() 
+    {
+        isInteractable = false;
+    }
+
+    public void Enable()
+    {
+        isInteractable = true;
+    }
+
+    public bool isEnabled()
+    {
+        return isInteractable;
+    }
 
 
     void OnDrawGizmosSelected ()
