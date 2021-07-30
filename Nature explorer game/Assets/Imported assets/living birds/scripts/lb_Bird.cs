@@ -256,7 +256,7 @@ public class lb_Bird : MonoBehaviour {
 		}
 
 		//keep the bird pointing at the target and move toward it
-		float flyingForce = 50.0f*controller.birdScale;
+		float flyingForce = 20.0f*controller.birdScale;
 		while(true){
 			if(!paused){
 				//do a raycast to see if the bird is going to hit the ground
