@@ -7,6 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
     public Queue<string> sentences = new Queue<string>();
     public TMPro.TextMeshProUGUI dialogueText;
+    public Image icon;
     
     #region Singleton
 
@@ -34,6 +35,9 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("Clearing sentences...");
             sentences.Clear();
         }
+
+        // Setting icon
+        icon.enabled = true;
 
         foreach ( string sentence in dialogue.sentences)
         {
@@ -70,6 +74,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueText.text = "";
         Debug.Log("Dialogue ended.");
+        icon.enabled = false;
     }
 
 }
