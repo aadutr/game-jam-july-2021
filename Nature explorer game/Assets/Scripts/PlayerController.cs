@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 jumpDirection = Vector3.zero;
 
     public Transform birdTarget;
+    private bool birdOnPlayer = false;
+    private Collider landedBird;
 
     // int isRunningHash = Animator.StringToHash("isRunning");
     // int isJumpingHash = Animator.StringToHash("isJumping");
@@ -34,6 +36,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if a bird landed on player
+        if(!birdOnPlayer){
+            Collider[] hitCols = Physics.OverlapSphere(birdTarget.position,1f);
+            for(int i=0;i<hitCols.Length;i++){
+                if (hitCols[i].tag == "lb_bird"){
+                    birdOnPlayer = true;
+                    landedBird = hitCols[i];
+                }
+            }
+        }
+        
+        
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -47,6 +61,10 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
             controller.Move(moveDirection.normalized * speed* Time.deltaTime);
+            if (birdOnPlayer){
+                landedBird.SendMessage("FlyAway");
+                birdOnPlayer = false;
+            }
         }
 
         playerGrounded = controller.isGrounded;
@@ -55,6 +73,10 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButton("Jump") && playerGrounded)
         {
             jumpDirection.y = jumpSpeed;
+            if (birdOnPlayer){
+                landedBird.SendMessage("FlyAway");
+                birdOnPlayer = false;
+            }
         }
         jumpDirection.y -= gravity * Time.deltaTime;
 
@@ -78,7 +100,7 @@ public class PlayerController : MonoBehaviour
 					// Attract bird
 					Debug.Log(birdTypeToAttract + " found!");
                     bird = hitColliders[i];
-                    bird.SendMessage ("FlyToTarget",birdTarget.position);
+                    bird.SendMessage ("FlyToTarget", birdTarget.position);
                     Debug.Log("Bird flying to player.");
                     break;
 				}
