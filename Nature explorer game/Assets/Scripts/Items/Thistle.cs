@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Sunflower seeds", menuName = "Inventory/Sunflower")]
-public class Sunflower : Item
+[CreateAssetMenu(fileName = "Thistle", menuName = "Inventory/Thistle")]
+public class Thistle : Item
 {
-    string bird = "cardinal";
-	PlayerController player;
+    private string bird = "goldFinch";
+	private PlayerController player;
 
 
 	public void OnEnable(){

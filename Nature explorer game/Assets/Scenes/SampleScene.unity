@@ -199,6 +199,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 788077909}
     m_Modifications:
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 291278380}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DialogueTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 680314811684131956, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -473,6 +501,7 @@ Transform:
   m_Children:
   - {fileID: 377274867}
   - {fileID: 650839546}
+  - {fileID: 981259281}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -494,6 +523,7 @@ MonoBehaviour:
   turnSmoothTime: 0.1
   jumpSpeed: 5
   gravity: 10
+  birdTarget: {fileID: 981259281}
 --- !u!143 &278688889
 CharacterController:
   m_ObjectHideFlags: 0
@@ -533,6 +563,27 @@ MonoBehaviour:
     m_Bits: 64
   interactionPoint: {fileID: 650839546}
   interactionRange: 1.5
+--- !u!1 &291278375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 680314811684131957, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+  m_PrefabInstance: {fileID: 114733732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &291278380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291278375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e837a3b2127b1409b229fef7b94af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - Let's see if any bird likes this food... Give them a few seconds to appear
+      before moving on.
 --- !u!224 &368210941 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 680314811684131956, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
@@ -1483,7 +1534,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703571996}
-  m_LocalRotation: {x: 0.087245114, y: -0.00000001714077, z: 0.0000000015011725, w: 0.9961869}
+  m_LocalRotation: {x: 0.087245114, y: 0.00000001714077, z: -0.0000000015011725, w: 0.9961869}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1911,6 +1962,27 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &918563260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 680314811684131957, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+  m_PrefabInstance: {fileID: 1133489700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &918563265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918563260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e837a3b2127b1409b229fef7b94af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - Let's see if any bird likes this food... Give them a few seconds to appear
+      before moving on.
 --- !u!1 &927815190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,7 +2425,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.087245114, y: -0.000000034281545, z: 0.0000000030023453, w: 0.9961869}
+  m_LocalRotation: {x: 0.087245114, y: 0.000000034281545, z: -0.0000000030023453, w: 0.9961869}
   m_LocalPosition: {x: 665.97253, y: 131.93, z: 592.5802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2527,6 +2599,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975325458}
   m_CullTransparentMesh: 1
+--- !u!1 &981259280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981259281}
+  - component: {fileID: 981259282}
+  m_Layer: 0
+  m_Name: birdTarget
+  m_TagString: lb_perchTarget
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981259281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981259280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.28, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 278688887}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &981259282
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981259280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &982515559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 680314811684131957, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+  m_PrefabInstance: {fileID: 680314811320166281}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &982515564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982515559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e837a3b2127b1409b229fef7b94af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - Let's see if any bird likes this food... Give them a few seconds to appear
+      before moving on.
 --- !u!1001 &992167474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2721,6 +2858,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 788077909}
     m_Modifications:
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 918563265}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DialogueTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 680314811684131956, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2947,6 +3112,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1190751183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 680314811684131957, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+  m_PrefabInstance: {fileID: 1747256128}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1190751188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190751183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e837a3b2127b1409b229fef7b94af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - Let's see if any bird likes this food... Give them a few seconds to appear
+      before moving on.
 --- !u!1 &1227504098
 GameObject:
   m_ObjectHideFlags: 3
@@ -3035,18 +3221,6 @@ PrefabInstance:
     - target: {fileID: 5544185041474958978, guid: 3bf2551ca21487149a42e10c0d7693c8, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5544185041474958978, guid: 3bf2551ca21487149a42e10c0d7693c8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.6629641
-      objectReference: {fileID: 0}
-    - target: {fileID: 5544185041474958978, guid: 3bf2551ca21487149a42e10c0d7693c8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.6629642
-      objectReference: {fileID: 0}
-    - target: {fileID: 5544185041474958978, guid: 3bf2551ca21487149a42e10c0d7693c8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.1618533
       objectReference: {fileID: 0}
     - target: {fileID: 5544185041474958978, guid: 3bf2551ca21487149a42e10c0d7693c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3584,6 +3758,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 788077909}
     m_Modifications:
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1190751188}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DialogueTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 680314811684131956, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4204,11 +4406,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 11400000, guid: 1ca5316dd08051f42b31052d31beefed, type: 3}
+      propertyPath: collideWithObjects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1ca5316dd08051f42b31052d31beefed, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 1ca5316dd08051f42b31052d31beefed, type: 3}
       propertyPath: idealNumberOfBirds
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1ca5316dd08051f42b31052d31beefed, type: 3}
+      propertyPath: maximumNumberOfBirds
       value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4284,6 +4494,34 @@ PrefabInstance:
     - target: {fileID: 680314811447319497, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 982515564}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DialogueTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 680314811684131721, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 680314811684131956, guid: 2af963932681d3f41a27ebeae059f8ff, type: 3}
       propertyPath: m_Pivot.x
