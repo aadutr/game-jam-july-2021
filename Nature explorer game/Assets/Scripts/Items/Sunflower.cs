@@ -5,11 +5,21 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Sunflower seeds", menuName = "Inventory/Sunflower")]
 public class Sunflower : Item
 {
-    // When pressed in inventory
+    string bird = "cardinal";
+	PlayerController player;
+
+
+	public void OnEnable(){
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+	}
+
+	// When pressed in inventory
 	public override void Use()
 	{
 		base.Use();
         // Some usage
-		RemoveFromInventory();					// Remove it from inventory
+		player.AttractBirdsWithFood(bird);
+
+		// RemoveFromInventory();					// Remove it from inventory
 	}
 }

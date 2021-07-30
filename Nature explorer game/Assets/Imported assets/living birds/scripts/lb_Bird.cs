@@ -126,6 +126,7 @@ public class lb_Bird : MonoBehaviour {
 		}else{
 			GetComponent<AudioSource>().PlayOneShot (flyAway2,.1f);
 		}
+		
 		flying = true;
 		landing = false;
 		onGround = false;
@@ -169,7 +170,7 @@ public class lb_Bird : MonoBehaviour {
 			tempTarget = transform.position + (new Vector3(transform.forward.x,.5f,transform.forward.z)*distanceToTarget);
 
 			while(vectorDirectionToTarget.y>.5f){
-				//Debug.DrawLine (tempTarget,tempTarget+Vector3.up,Color.red);
+				// Debug.DrawLine (tempTarget,tempTarget+Vector3.up,Color.red);
 				vectorDirectionToTarget = (tempTarget-transform.position).normalized;
 				finalRotation = Quaternion.LookRotation(vectorDirectionToTarget);
 				transform.rotation = Quaternion.Slerp (startingRotation,finalRotation,t);
@@ -197,7 +198,7 @@ public class lb_Bird : MonoBehaviour {
 				if(controller.collideWithObjects){
 					forwardStraight = transform.forward;
 					forwardStraight.y = 0.0f;
-					//Debug.DrawRay (transform.position+(transform.forward*.1f),forwardStraight*.75f,Color.green);
+					Debug.DrawRay (transform.position+(transform.forward*.1f),forwardStraight*.75f,Color.green);
 					if (Physics.Raycast (transform.position+(transform.forward*.15f*controller.birdScale),forwardStraight,out hit,.75f*controller.birdScale)){
 						if(!hit.collider.isTrigger){
 							AbortFlyToTarget();
@@ -376,11 +377,11 @@ public class lb_Bird : MonoBehaviour {
 					DisplayBehavior(birdBehaviors.ruffle);	
 				}else if (!perched && rand <.85){
 					DisplayBehavior(birdBehaviors.hopForward);	
-				}else if (!perched && rand < .9){
+				}else if (!perched && rand <.9){
 					DisplayBehavior(birdBehaviors.hopLeft);	
-				}else if (!perched && rand <.95){
+				}else if (!perched && rand <.92){
 					DisplayBehavior(birdBehaviors.hopRight);
-				}else if (!perched && rand <= 1){
+				}else if (!perched && rand <.93){
 					DisplayBehavior(birdBehaviors.hopBackward);	
 				}else{
 					DisplayBehavior(birdBehaviors.sing);	
@@ -427,13 +428,6 @@ public class lb_Bird : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (col.tag == "lb_bird"){
-			FlyAway ();
-		}
-	}
-
-	void OnTriggerExit(Collider col){
-		//if bird has hopped out of the target area lets fly
-		if (onGround && (col.tag == "lb_groundTarget" || col.tag == "lb_perchTarget")){
 			FlyAway ();
 		}
 	}
