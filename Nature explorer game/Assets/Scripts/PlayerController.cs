@@ -24,14 +24,15 @@ public class PlayerController : MonoBehaviour
     private bool birdOnPlayer = false;
     private Collider landedBird;
 
+    public PlayerStats stats;
     // int isRunningHash = Animator.StringToHash("isRunning");
     // int isJumpingHash = Animator.StringToHash("isJumping");
 
     // Start is called before the first frame update
-    // void Start()
-    // {
-    //     combat = GetComponent<CharacterCombat>();
-    // }
+    void Start()
+    {
+        stats = GetComponent<PlayerStats>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
                 if (hitCols[i].tag == "lb_bird"){
                     birdOnPlayer = true;
                     landedBird = hitCols[i];
+                    stats.IncreaseBirdCount();
                 }
             }
         }
