@@ -62,7 +62,9 @@ public class PlayerController : MonoBehaviour
 
             controller.Move(moveDirection.normalized * speed* Time.deltaTime);
             if (birdOnPlayer){
-                landedBird.SendMessage("FlyAway");
+                if (landedBird != null){
+                    landedBird.SendMessage("FlyAway");
+                }                
                 birdOnPlayer = false;
             }
         }
@@ -74,7 +76,9 @@ public class PlayerController : MonoBehaviour
         {
             jumpDirection.y = jumpSpeed;
             if (birdOnPlayer){
-                landedBird.SendMessage("FlyAway");
+                if (landedBird != null){
+                    landedBird.SendMessage("FlyAway");
+                }
                 birdOnPlayer = false;
             }
         }
@@ -93,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
 		// Check if there are birds of the right kind in the near vicinity
         Collider bird;
-		Collider[] hitColliders = Physics.OverlapSphere(birdTarget.position,20f);
+		Collider[] hitColliders = Physics.OverlapSphere(birdTarget.position,13f);
 		for(int i=0;i<hitColliders.Length;i++){
 			if (hitColliders[i].tag == "lb_bird"){
 				if (hitColliders[i].name.Contains(birdTypeToAttract)){
