@@ -19,6 +19,6 @@ public class Sunflower : Item
         // Some usage
 		player.AttractBirdsWithFood(bird);
 
-		// RemoveFromInventory();					// Remove it from inventory
+		RemoveFromInventory();					// Remove it from inventory
 	}
 }
