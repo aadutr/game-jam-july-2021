@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Sunflower seeds", menuName = "Inventory/Sunflower")]
 public class Sunflower : Item
 {
-    string bird = "cardinal";
-	PlayerController player;
+    private string bird = "cardinal";
+	private PlayerController player;
 
 
-	public void OnEnable(){
+	public void Start(){
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 	}
 
