@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5544185041474958978}
   - component: {fileID: 5544185041474958979}
   - component: {fileID: 5544185041474958976}
+  - component: {fileID: 2763947390245748473}
   m_Layer: 6
   m_Name: OakTree
   m_TagString: Untagged
@@ -62,7 +63,21 @@ MonoBehaviour:
   radius: 3
   interactionType: 0
   isInteractable: 1
-  item: {fileID: 11400000, guid: b367e893d1e3ba24e8fba30699efecd6, type: 2}
+  item: {fileID: 2763947390245748473}
+--- !u!114 &2763947390245748473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544185041474958977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f31c21d42ce1e49a85fd62d615474f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Acorn
+  icon: {fileID: 21300000, guid: 289b244923636ca44b1870de1cb6d27a, type: 3}
 --- !u!1001 &5544185041245891931
 PrefabInstance:
   m_ObjectHideFlags: 0
