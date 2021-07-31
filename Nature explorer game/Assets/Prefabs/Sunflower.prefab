@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 375909027060292511}
   - component: {fileID: 375909027060292508}
   - component: {fileID: 375909027060292510}
+  - component: {fileID: 9057434773400674812}
   m_Layer: 6
   m_Name: Sunflower
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MonoBehaviour:
   radius: 1.7
   interactionType: 0
   isInteractable: 1
-  item: {fileID: 11400000, guid: e96db3bb9385eae43b40ea1338ad531f, type: 2}
+  item: {fileID: 9057434773400674812}
 --- !u!135 &375909027060292510
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -62,6 +63,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.2
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &9057434773400674812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375909027060292509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693b9cc44605acd46b02ced961712a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Sunflower seeds
+  icon: {fileID: 21300000, guid: 283cd25cbc1764e4584b2295cb67209f, type: 3}
 --- !u!1001 &375909026159115635
 PrefabInstance:
   m_ObjectHideFlags: 0

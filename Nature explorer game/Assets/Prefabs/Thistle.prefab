@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3922156408822776252}
   - component: {fileID: 3922156408822776254}
   - component: {fileID: 3922156408822776253}
+  - component: {fileID: 4788531645394398139}
   m_Layer: 6
   m_Name: Thistle
   m_TagString: Untagged
@@ -62,7 +63,21 @@ MonoBehaviour:
   radius: 1
   interactionType: 0
   isInteractable: 1
-  item: {fileID: 11400000, guid: e464185b10fec964c86703e5db5ab930, type: 2}
+  item: {fileID: 4788531645394398139}
+--- !u!114 &4788531645394398139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922156408822776251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71114d49c135ea408643589c4b47e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Thistle
+  icon: {fileID: 21300000, guid: 912097e3d8fdd264dbaf4a8b59560557, type: 3}
 --- !u!1001 &3922156408233920938
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Thistle", menuName = "Inventory/Thistle")]
 public class Thistle : Item
 {
     private string bird = "goldFinch";
 	private PlayerController player;
 
 
-	public void OnEnable(){
+	public void Start(){
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 	}
 
